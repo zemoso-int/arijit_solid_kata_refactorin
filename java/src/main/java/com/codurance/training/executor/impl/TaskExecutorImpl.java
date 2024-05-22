@@ -25,6 +25,21 @@ public class TaskExecutorImpl implements TaskExecutor {
             case "help":
                 taskActionService.help();
                 break;
+            case "view":
+                taskActionService.show(commandRest[1]);
+                break;
+            case "deadline":
+                taskActionService.deadline(commandRest[1]);
+                break;
+            case "today":
+                taskActionService.today();
+                break;
+            case "delete":
+                taskActionService.delete(commandRest[1]);
+                break;
+            case "customize":
+                taskActionService.customize(commandRest[1]);
+                break;
             default:
                 taskActionService.error(command);
                 break;
