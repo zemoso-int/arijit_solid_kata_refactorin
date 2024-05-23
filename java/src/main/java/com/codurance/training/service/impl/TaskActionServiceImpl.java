@@ -1,10 +1,7 @@
 package com.codurance.training.service.impl;
 
 import com.codurance.training.models.ProjectTask;
-import com.codurance.training.service.TaskCommandService;
-import com.codurance.training.service.TaskDisplayService;
-import com.codurance.training.service.TaskHelpService;
-import com.codurance.training.service.TaskStatusService;
+import com.codurance.training.service.*;
 import com.codurance.training.tasks.Task;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -16,7 +13,8 @@ import java.util.regex.Pattern;
 
 import static java.lang.System.out;
 
-public class TaskActionServiceImpl implements TaskHelpService, TaskCommandService, TaskDisplayService, TaskStatusService {
+public class TaskActionServiceImpl implements TaskHelpService, TaskCommandService, TaskDisplayService,
+        TaskStatusService, TaskDeleteService, TaskCustomizeService, TaskDeadlineService, TaskErrorService {
 
     private final Map<String, List<Task>> tasks = new LinkedHashMap<>();
     private long lastId =0;
